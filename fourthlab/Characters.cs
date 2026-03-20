@@ -13,6 +13,8 @@ namespace fourthlab
         protected static Random rnd = new Random();
         public int health = 100;
         public int damage = 10;
+
+        public Image Photo;
         public virtual String GetInfo()
         {
             var str = $"\nЗдоровье: {this.health} \nУрон: {this.damage}";
@@ -39,7 +41,8 @@ namespace fourthlab
             {
                 health = 100 + rnd.Next() % 200,
                 damage = 10 + rnd.Next() % 30,
-                armor = 5 + rnd.Next() % 50
+                armor = 5 + rnd.Next() % 50,
+                Photo = Properties.Resources.warrior
             };
         }
     }
@@ -73,7 +76,8 @@ namespace fourthlab
                 health = 100 + rnd.Next() % 100,
                 damage = 10 + rnd.Next() % 30,
                 mana = 5 + rnd.Next() % 50,
-                type = (MageType)rnd.Next(4)
+                type = (MageType)rnd.Next(4),
+                Photo = Properties.Resources.mage
             };
         }
     }
@@ -87,6 +91,7 @@ namespace fourthlab
             var str = $"Я лучник c точностью {this.accuracy}%";
             str += base.GetInfo();
             str += $"\nКол-во стрел: {this.arrows}";
+            
             return str;
         }
 
@@ -96,7 +101,8 @@ namespace fourthlab
                 health = 50 + rnd.Next() % 100,
                 damage = 10 + rnd.Next() % 30,
                 accuracy = rnd.Next(10, 100),
-                arrows = 5 + rnd.Next() % 30
+                arrows = 5 + rnd.Next() % 30,
+                Photo = Properties.Resources.archer
             };
         }
     }

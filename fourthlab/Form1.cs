@@ -65,6 +65,7 @@ namespace fourthlab
             if (this.charactersList.Count == 0)
             {
                 txtOut.Text = "Пока что тут пусто =)";
+                OutBox.Image = null;
                 return;
             }
 
@@ -72,6 +73,7 @@ namespace fourthlab
             this.charactersList.RemoveAt(0);
 
             txtOut.Text = character.GetInfo();
+            OutBox.Image = character.Photo;
 
             ShowInfo();
         }

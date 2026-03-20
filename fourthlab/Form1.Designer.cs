@@ -35,7 +35,15 @@
             warriorInfo = new TextBox();
             mageInfo = new TextBox();
             archerInfo = new TextBox();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            OutBox = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)OutBox).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -85,7 +93,7 @@
             // warriorInfo
             // 
             warriorInfo.BorderStyle = BorderStyle.None;
-            warriorInfo.Location = new Point(70, 133);
+            warriorInfo.Location = new Point(87, 130);
             warriorInfo.Name = "warriorInfo";
             warriorInfo.ReadOnly = true;
             warriorInfo.Size = new Size(123, 16);
@@ -94,7 +102,7 @@
             // mageInfo
             // 
             mageInfo.BorderStyle = BorderStyle.None;
-            mageInfo.Location = new Point(70, 190);
+            mageInfo.Location = new Point(87, 185);
             mageInfo.Name = "mageInfo";
             mageInfo.ReadOnly = true;
             mageInfo.Size = new Size(123, 16);
@@ -104,17 +112,61 @@
             // archerInfo
             // 
             archerInfo.BorderStyle = BorderStyle.None;
-            archerInfo.Location = new Point(70, 246);
+            archerInfo.Location = new Point(87, 240);
             archerInfo.Name = "archerInfo";
             archerInfo.ReadOnly = true;
             archerInfo.Size = new Size(123, 16);
             archerInfo.TabIndex = 6;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.mage;
+            pictureBox2.Location = new Point(52, 175);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(32, 32);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 7;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.warrior;
+            pictureBox3.Location = new Point(52, 120);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(32, 32);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 8;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = Properties.Resources.archer;
+            pictureBox4.Location = new Point(52, 230);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(32, 32);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 9;
+            pictureBox4.TabStop = false;
+            // 
+            // OutBox
+            // 
+            OutBox.BackColor = SystemColors.Window;
+            OutBox.Location = new Point(178, 406);
+            OutBox.Name = "OutBox";
+            OutBox.Size = new Size(32, 32);
+            OutBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            OutBox.TabIndex = 10;
+            OutBox.TabStop = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(358, 515);
+            Controls.Add(OutBox);
+            Controls.Add(pictureBox4);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox2);
             Controls.Add(archerInfo);
             Controls.Add(mageInfo);
             Controls.Add(warriorInfo);
@@ -126,6 +178,10 @@
             Text = "Form1";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)OutBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -139,5 +195,9 @@
         private TextBox warriorInfo;
         private TextBox mageInfo;
         private TextBox archerInfo;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
+        private PictureBox OutBox;
     }
 }
